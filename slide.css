@@ -1,0 +1,115 @@
+
+
+body {
+    align-items: center;
+    background-image: url("/images/ai-generated-7852307_1920.jpg");
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    height: 100%; /* Vollbildhöhe */
+    justify-content: center;
+    margin: 0;
+    padding: 80px 0 0 0; /* Abstand nach oben für die Navbar */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flex-card-wrapper {
+    width: 90%;
+    max-width: 60rem;
+    height: 30vh;
+    max-height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 80px; /* Schiebt die Bilder weiter nach unten */
+}
+
+.flex-card-container {
+    margin: 0 10px 0 0;
+    height: 70%;
+    width: 20%;
+    transition: 450ms all ease-in-out;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+}
+
+.flex-card-container.active {
+    width: 60%;
+}
+
+.flex-card-container.active .overlay h3,
+.flex-card-container.active .overlay p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.flex-card-container.bild-1 {
+    background-image: url(https://assets.codepen.io/907368/flexcard-1.jpg);
+}
+
+.flex-card-container.bild-2 {
+    background-image: url(https://assets.codepen.io/907368/flexcard-2.jpg);
+}
+
+.flex-card-container.bild-3 {
+    background-image: url(https://assets.codepen.io/907368/flexcard-3.jpg);
+}
+
+.flex-card-container.bild-4 {
+    background-image: url(https://assets.codepen.io/907368/flexcard-4.jpg);
+}
+
+.flex-card-container.bild-5 {
+    background-image: url("/images/ai-generated-8170159_1280.jpg");
+}
+
+.flex-card-container:last-child {
+    margin: 0;
+}
+
+.flex-card-container .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 9rem;
+    padding: 0 0 2rem 1.5rem;
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    width: 100%;
+    transition: 450ms all ease-in-out;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.flex-card-container .overlay h3 {
+    top: 0;
+    font-size: 1.8rem;
+    transition: 350ms 200ms all ease-in-out;
+}
+
+.flex-card-container .overlay p {
+    top: 3rem;
+    font-size: 1.2rem;
+    transition: 350ms 300ms all ease-in-out;
+}
+
+.flex-card-container .overlay h3,
+.flex-card-container .overlay p {
+    color: white;
+    position: absolute;
+    left: 9rem;
+    width: 20rem;
+    opacity: 0;
+    transform: translateX(-15px);
+}
