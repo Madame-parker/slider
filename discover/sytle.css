@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: radial-gradient(circle at center, #0a0014, #000);
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+
+  
+  .stars {
+    background-image: url(../images/background-discover.png);
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  .intro {
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    padding-top: 60px; /* Platz für Navbar */
+  }
+  
+  .crawl {
+    font-size: 1rem;
+    width: 60%;
+    text-align: center;
+    color: #ffe6ff;
+    transform: rotateX(20deg);
+    animation: crawl 30s linear infinite;
+  }
+  
+  @keyframes crawl {
+    0% { transform: translateY(100%) rotateX(20deg); }
+    100% { transform: translateY(-200%) rotateX(20deg); }
+  }
+  
+  header {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #c799ff;
+    animation: pulseText 3s infinite;
+  }
+  
+  @keyframes pulseText {
+    0%, 100% { text-shadow: 0 0 10px #9d7dff; }
+    50% { text-shadow: 0 0 30px #ffe6ff; }
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #ffe6ff;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .feature {
+    background: rgba(10, 0, 40, 0.6);
+    padding:2rem;
+    border-radius: 1.5rem;
+    border: 1px solid #a57cff;
+    box-shadow: 0 0 30px rgba(164, 115, 255, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    backdrop-filter: blur(4px);
+    text-align: center;
+  }
+  
+  .feature:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+  }
+  
+  .feature img {
+    width: 80px;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .feature h2 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    color: #b281ff;
+  }
+  
+  .feature p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #e8d9ff;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #aaaaff;
+  }
+
+  .chat-preview {
+    padding: 2rem;
+    background: rgba(0, 0, 20, 0.6);
+    color: #f0e6ff;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #b781ff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .chat-box {
+    background: rgba(20, 10, 40, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    margin-top: 1rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ffccff;
+    min-height: 150px;
+  }
+  
+  .chat-box p {
+    margin: 0.5rem 0;
+    animation: type 1s steps(40) forwards;
+  }
+  
+  @keyframes type {
+    from { width: 0; opacity: 0; }
+    to { width: 100%; opacity: 1; }
+  }
+
+  .quiz-section {
+    padding: 2rem;
+    background: rgba(40, 20, 60, 0.6);
+    color: #f0e6ff;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #b781ff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  #quiz-form {
+    text-align: left;
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  fieldset {
+    border: 1px solid #b781ff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  legend {
+    font-size: 1.2rem;
+    color: #ffe6ff;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #e8d9ff;
+  }
+  
+  button {
+    background: #a57cff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #9d7dff;
+  }
+  
+  #quiz-result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #ffe6ff;
+  }

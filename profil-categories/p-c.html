@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Dein Profil ✨</title>
+    <link rel="stylesheet" href="p-c.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <h1>✨ Dein Profil ✨</h1>
+        </header>
+
+        <section class="profile-content">
+            <div class="profile-details">
+                <h2>💖 Benutzername: <span id="username">Abenteurer123</span></h2>
+                <ul>
+                    <li>
+                        Geschlecht: 
+                        <select id="gender" class="dropdown" disabled>
+                            <option value="goblin">Goblin (Männlich)</option>
+                            <option value="amazone">Amazone (Weiblich)</option>
+                            <option value="regenwurm">Regenwurm (Divers)</option>
+                        </select>
+                    </li>
+                    <li>Wohnort: <span id="location">Berlin</span></li>
+                    <li>Alter: <span id="age">28</span></li>
+                    <li>Biografie: <span id="bio">Liebe Abenteuer und Magie!</span></li>
+                    <li>Musikgeschmack: <span id="music">Rock, Klassik</span></li>
+                    <li>
+                        Persönlichkeit: 
+                        <select id="personality" class="dropdown" disabled>
+                            <option value="Ex">Extrovertiert</option>
+                            <option value="IN">Introvertiert</option>
+                        </select>
+                    </li>
+                    <li>Größe: <span id="height">1,80m</span></li>
+                    <li>Bildung: <span id="education">Master in Informatik</span></li>
+                    <li>Kinder: <span id="kids">Keine</span></li>
+                    <li>Raucher: <span id="smoker">Nein</span></li>
+                    <li>Beruf: <span id="job">Softwareentwickler</span></li>
+                    <li>
+                        Wohnsituation: 
+                        <select id="living-situation" class="dropdown" disabled>
+                            <option value="alone">Alleine</option>
+                            <option value="parents">Bei Mama und Papa</option>
+                            <option value="bridge">Unter einer Brücke</option>
+                        </select>
+                    </li>
+                </ul>
+                <button id="edit-button" class="edit-button">Bearbeiten</button>
+                <button id="save-button" class="save-button" disabled>Änderungen speichern</button>
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2>Änderungen gespeichert!</h2>
+                        <p id="modal-message">Deine Änderungen wurden erfolgreich gespeichert.</p>
+                        <button id="modal-close" class="modal-close-button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="profil-c.js"></script>
+</body>
+</html>
