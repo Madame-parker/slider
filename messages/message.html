@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🦸 Nachrichten - Helden</title>
+    <link rel="stylesheet" href="heroes.css" />
+</head>
+<body>
+    <div class="notification" id="notification">Neue Nachricht!</div>
+
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <aside class="chat-slider" id="chat-slider">
+            <button id="slider-toggle" class="chat-toggle-button" aria-label="Chats ein-/ausklappen">🗨️</button>
+            <h2>Alle Chats</h2>
+            <ul id="chat-list">
+                <li class="chat-item" data-chat="chat1">Chat mit Batman</li>
+                <li class="chat-item" data-chat="chat2">Chat mit Wonder Woman</li>
+                <li class="chat-item" data-chat="chat3">Chat mit Superman</li>
+            </ul>
+        </aside>
+
+        <!-- Aktueller Chat -->
+        <main class="current-chat" id="current-chat">
+            <header class="chat-header">
+                <h2 id="chat-title">Chat mit Batman</h2>
+            </header>
+            <section class="messages" id="messages">
+                <div class="message hero">Batman: Ich bin bereit für die Mission.</div>
+                <div class="message user">Du: Perfekt, ich auch. Lass uns loslegen!</div>
+            </section>
+            <footer class="chat-footer">
+                <input type="text" id="message-input" placeholder="Nachricht schreiben..." />
+                <button id="send-button">Senden</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="heroes.js"></script>
+</body>
+</html>
